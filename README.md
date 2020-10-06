@@ -1,3 +1,3 @@
 # sangiin-calculator
-swing calculator for 2019 japanese house of councilllors elections
-lmao i still need to do this ive done some basic work but it needs more work
+swing calculator for 2019 japanese house of councilllors elections\n
+turns out i didnt even add the python file. will probably repurpose as a 2020 korean election swing calculator.
