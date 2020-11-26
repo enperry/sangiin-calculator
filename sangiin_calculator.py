@@ -1,4 +1,3 @@
-# TODO add percentage calculation to constituency, try to figure out return_elected w/ a list slicing?
 # define the constituency
 class constituency():
     def __init__(self, name, num, candidatelist):
@@ -17,9 +16,17 @@ class constituency():
             result.append(str(_candidatelist[i]))
             i = i + 1
         return result
-    
+
     def return_percentages(self):
-        pass
+        result = []
+        total = 0
+        for _candidate in self.candidatelist:
+            total = total + _candidate.votes
+        for _candidate in self.candidatelist:
+            # due to python being annoying with floating points i have to go from float -> str -> float. 
+            # there has to be a better way (decimal?) but i can't be arsed to import it just to fix this
+            result.append([_candidate.name, _candidate.party, float("{:.3f}".format((_candidate.votes / total) * 100))])
+        return result
 
     def recalculate(self, votePercent):
         pass
@@ -27,7 +34,7 @@ class constituency():
     def __str__(self):
         return "Name: " + str(self.name) + "\nSeats to fill: " + str(self.num) + "\nCandidates: " + str(self.num)
         
-# TODO add return strings for things like whether candidate was elected
+# add return strings for things like whether candidate was elected
 class candidate():
     def __init__(self, name, votes, party):
         self.name = name
@@ -79,6 +86,6 @@ def main():
 
     constituency1 = constituency("hokkaido", 3, candidatelist)
 
-    print(constituency1.return_elected())
+    print(constituency1.return_percentages())
 
 main()
