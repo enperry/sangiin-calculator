@@ -1,3 +1,4 @@
+# TODO figure out way to export constituency results, the actual recalculation function
 # define the constituency
 class constituency():
     def __init__(self, name, num, candidatelist):
@@ -52,7 +53,6 @@ class candidate():
     
     def __str__(self):
         return "Name: " + str(self.name) + " Votes: " + str(self.votes) + " Party: " + str(self.party)
-
 
 def main():
     """
