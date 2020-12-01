@@ -30,6 +30,8 @@ class constituency():
         return result
 
     def recalculate(self, votePercent):
+        # do you have something.... against DOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOGS!!!!!!!!! (sorry)
+        # anyways. add up total % of party-votes, recalculate according to individual swings, (adding up to 0, add check), with multiple candidates for one party redist. according to proportion of votes
         pass
 
     def __str__(self):
